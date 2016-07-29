@@ -1,5 +1,10 @@
 // HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/
 
+*
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+
 html
   color #222
   font-size 1em
@@ -83,3 +88,76 @@ textarea
 
   &:after
     clear both
+
+// ==================================================
+// Custom styles
+// ==================================================
+
+
+section.shots
+  width 1024px
+  margin 0 auto
+
+  ul
+    margin 0
+    padding 0
+
+    li
+      float left
+      position relative
+      margin 10px
+      list-style-type none
+      border 1px solid #ccc
+      font-family Helvetica, Arial, sans-serif;
+      -webkit-box-shadow 2px 3px 5px 0px rgba(0,0,0,0.13)
+      -moz-box-shadow 2px 3px 5px 0px rgba(0,0,0,0.13)
+      box-shadow 2px 3px 5px 0px rgba(0,0,0,0.13)
+
+    .image
+      img
+        width 318px
+
+    .extra
+      position absolute
+      bottom 0
+      height 40px
+      width 100%
+      background-color rgba(0, 0, 0, 0.7)
+      color #EEE
+      font-weigth bold
+      padding 5px
+      padding-top 7px
+      padding-left 10px
+      font-size 18px
+
+      .views
+        position absolute
+        right 5px
+        top 2px
+        padding 5px
+
+        .icon
+          margin-right 5px
+
+// On tablets, change to %
+@media screen and (max-width: 768px)
+
+  section.shots
+    width 100%
+
+    ul
+
+      li
+        width 46%
+        margin 2%
+
+      .image
+        img
+          width 100%
+
+// Above 650px, remove extra (descriptions)
+@media screen and (max-width: 650px)
+
+  section.shots
+    .extra
+      display none
