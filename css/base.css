@@ -83,6 +83,42 @@ textarea {
 .clearfix:after {
   clear: both;
 }
+.img-circle {
+  border-radius: 50%;
+}
+.shot-head {
+  position: relative;
+  border: 1px solid #ccc;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
+  -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
+  margin: 10px;
+}
+.shot-head .image {
+  text-align: center;
+}
+.shot-head .extra {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color: #eee;
+  padding: 5px;
+  padding-top: 7px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.shot-head .extra .views {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  padding: 5px;
+}
+.shot-head .extra .views .icon {
+  margin-right: 5px;
+}
 section.shots {
   width: 1024px;
   margin: 0 auto;
@@ -93,41 +129,39 @@ section.shots ul {
 }
 section.shots ul li {
   float: left;
-  position: relative;
-  margin: 10px;
   list-style-type: none;
-  border: 1px solid #ccc;
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
-  -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
-  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
 }
 section.shots ul .image img {
   width: 318px;
 }
-section.shots ul .extra {
-  position: absolute;
-  bottom: 0;
-  height: 40px;
-  width: 100%;
-  background-color: rgba(0,0,0,0.7);
-  color: #eee;
-  font-weigth: bold;
-  padding: 5px;
-  padding-top: 7px;
-  padding-left: 10px;
-  font-size: 18px;
+section.shot {
+  width: 768px;
+  margin: 0 auto;
 }
-section.shots ul .extra .views {
-  position: absolute;
-  right: 5px;
-  top: 2px;
-  padding: 5px;
+section.shot .shot-description {
+  padding: 15px;
+  padding-top: 0;
 }
-section.shots ul .extra .views .icon {
-  margin-right: 5px;
+section.shot .shot-description .author {
+  heigth: 70px;
+  padding: 5px 0 10px;
+}
+section.shot .shot-description .author img {
+  width: 50px;
+}
+section.shot .shot-description .author .name {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #666;
+}
+section.shot .shot-description .description {
+  color: #666;
+  line-height: 1.4;
 }
 @media screen and (max-width: 768px) {
+  section.shot {
+    width: 100%;
+  }
   section.shots {
     width: 100%;
   }
@@ -140,7 +174,15 @@ section.shots ul .extra .views .icon {
   }
 }
 @media screen and (max-width: 650px) {
-  section.shots .extra {
+  section.shots .shot-head .extra {
     display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  section.shot .shot-head .image {
+    width: 100%;
+  }
+  section.shot .shot-head .image img {
+    width: 100%;
   }
 }
