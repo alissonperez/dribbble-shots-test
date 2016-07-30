@@ -4,7 +4,7 @@
   "description": "Shots list from dribbble",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/karma start --single-run"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,13 @@
   },
   "homepage": "https://github.com/alissonperez/vigilant-potato#readme",
   "devDependencies": {
+    "angular-mocks": "^1.5.8",
     "gulp": "^3.9.1",
-    "gulp-stylus": "^2.5.0"
+    "gulp-stylus": "^2.5.0",
+    "jasmine": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2"
   },
   "dependencies": {
     "angular": "^1.5.8"
