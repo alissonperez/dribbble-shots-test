@@ -10,13 +10,18 @@ describe('Shot provider', function() {
     $provider = _Shot_;
     $httpBackend = _$httpBackend_;
 
-    $httpBackend.when('GET', 'https://api.dribbble.com/v1/shots')
-      .respond([]);
+    $httpBackend.when('GET', /js\/templates\/.*/).respond();
   }));
 
-  it('returns trunsted html', function() {
-    $httpBackend.expectGET('https://api.dribbble.com/v1/shots');
+  it('make a get to shots list on dribbble api', function() {
+    $httpBackend.expectGET('https://api.dribbble.com/v1/shots').respond();
     $provider.all();
+    $httpBackend.flush();
+  });
+
+  it('make a get to a shot on dribbble api', function() {
+    $httpBackend.expectGET('https://api.dribbble.com/v1/shots/98').respond();
+    $provider.get(98);
     $httpBackend.flush();
   });
 });
