@@ -1,13 +1,13 @@
 <section class="shot">
   <div class="back"><a ui-sref="index">&lt; Back</a></div>
-  <div class="shot-head">
+  <div class="shot-head" ng-show="shot_loaded">
 	  <div class="image"><img ng-src="{{shot.images.normal}}"></div>
 	  <div class="extra">
 	    <span class="title">{{shot.title}}</span>
 	    <div class="views"><span class="icon"><img src="img/eye.png"></span>{{shot.views_count}}</div>
 	  </div>
   </div>
-  <div class="shot-description">
+  <div class="shot-description" ng-show="shot_loaded">
 	  <div class="author">
 	    <img class="img-circle" ng-src="{{shot.user.avatar_url}}">
 	    <span class="name">{{shot.user.name}}</span>

@@ -67,4 +67,8 @@ describe('Shot Controller', function() {
   it('set shot with shot returned from service', function(){
     expect($scope.shot).toEqual(shot.data);
   });
+
+  it('sets shot_loaded as true', function(){
+    expect($scope.shot_loaded).toBe(true);
+  });
 });

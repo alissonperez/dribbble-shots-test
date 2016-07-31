@@ -54,8 +54,10 @@ app.controller(
   ['$scope', '$stateParams', 'Shot',
    function($scope, $stateParams, Shot) {
      $scope.shot = {};
+     $scope.shot_loaded = false;
 
      Shot.get($stateParams.id).then(function(data){
+       $scope.shot_loaded = true;
        $scope.shot = data.data;
      });
    }]);
