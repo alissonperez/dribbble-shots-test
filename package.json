@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alissonperez/vigilant-potato.git"
+    "url": "git+https://github.com/alissonperez/dribbble-shots-test.git"
   },
   "author": "Alisson R. Perez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alissonperez/vigilant-potato/issues"
+    "url": "https://github.com/alissonperez/dribbble-shots-test/issues"
   },
-  "homepage": "https://github.com/alissonperez/vigilant-potato#readme",
+  "homepage": "https://github.com/alissonperez/dribbble-shots-test#readme",
   "devDependencies": {
     "angular-mocks": "^1.5.8",
     "gulp": "^3.9.1",

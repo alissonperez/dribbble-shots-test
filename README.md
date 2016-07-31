@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/alissonperez/vigilant-potato.svg?branch=master)](https://travis-ci.org/alissonperez/vigilant-potato)
+[![Build Status](https://travis-ci.org/alissonperez/dribbble-shots-test.svg?branch=master)](https://travis-ci.org/alissonperez/dribbble-shots-test)
 
 
-# vigilant-potato
+# dribbble-shots-test
