@@ -7,3 +7,4 @@ before_script:
 script:
   - npm test
   - node_modules/jshint/bin/jshint js test
+  - node_modules/stylus/bin/stylus styl
