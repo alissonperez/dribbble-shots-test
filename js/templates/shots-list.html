@@ -1,0 +1,13 @@
+<section class="shots">
+  <ul class="clearfix">
+	  <li class="shot-head" ng-repeat="shot in shots">
+      <a ui-sref="shot({id: shot.id})">
+	    <div class="image"><img ng-src="{{ shot.images.normal }}"></div>
+	    <div class="extra">
+	      <span class="title">{{shot.title | limit:24}}</span>
+	      <div class="views"><span class="icon"><img src="img/eye.png"></span>{{shot.views_count}}</div>
+	    </div>
+      </a>
+	  </li>
+  </ul>
+</section>

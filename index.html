@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="dribbbleApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,60 +11,10 @@
     <link rel="stylesheet" href="css/base.css">
   </head>
   <body>
-    <section class="shots">
-      <ul class="clearfix">
-	<li class="shot-head">
-	  <div class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/59947/screenshots/2867402/muti-1_1x.jpg"></div>
-	  <div class="extra">
-	    <span class="title">The Dog Pack</span>
-	    <div class="views"><span class="icon"><img src="img/eye.png"></span>45</div>
-	  </div>
-	</li>
-	<li class="shot-head">
-	  <div class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2867763/dr_1x.png"></div>
-	  <div class="extra">
-	    <span class="title">Lonely Planet : Cities</span>
-	    <div class="views"><span class="icon"><img src="img/eye.png"></span>45</div>
-	  </div>
-	</li>
-	<li class="shot-head">
-	  <div class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2867763/dr_1x.png"></div>
-	  <div class="extra">
-	    <span class="title">Lonely Planet : Cities</span>
-	    <div class="views"><span class="icon"><img src="img/eye.png"></span>45</div>
-	  </div>
-	</li>
-	<li class="shot-head">
-	  <div class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/40433/screenshots/2867763/dr_1x.png"></div>
-	  <div class="extra">
-	    <span class="title">Lonely Planet : Cities</span>
-	    <div class="views"><span class="icon"><img src="img/eye.png"></span>45</div>
-	  </div>
-	</li>
-      </ul>
-    </section>
-
-    <section class="shot">
-      <div class="shot-head">
-	<div class="image"><img src="https://d13yacurqjgara.cloudfront.net/users/59947/screenshots/2867402/muti-1_1x.jpg"></div>
-	<div class="extra">
-	  <span class="title">The Dog Pack</span>
-	  <div class="views"><span class="icon"><img src="img/eye.png"></span>45</div>
-	</div>
-      </div>
-      <div class="shot-description">
-	<div class="author">
-	  <img class="img-circle" src="https://d13yacurqjgara.cloudfront.net/users/40433/avatars/normal/ff7755fcd81ba64c582766bcdfe684c8.png?1460421927">
-	  <span class="name">Art Vandelay</span>
-	</div>
-	<div class="description">
-	  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam felis a mauris bibendum rutrum. Donec vestibulum ante quis nisl aliquam maximus. Suspendisse mi enim, efficitur at lacinia in, volutpat pulvinar tellus. Pellentesque congue interdum volutpat. Mauris iaculis ut urna vitae imperdiet. Proin leo libero, fermentum ac efficitur quis, aliquet non enim. Duis egestas dui neque. Nunc eget nibh elementum, dignissim tellus quis, blandit tellus. Nullam cursus vel sem sed convallis. Pellentesque luctus mi massa, quis aliquet nunc ornare id. Praesent at efficitur ipsum. Sed vel vehicula dui, et scelerisque mauris. In leo nibh, accumsan quis nibh vitae, accumsan posuere urna. Phasellus dolor magna, imperdiet id arcu sed, ornare gravida tellus. Nunc suscipit libero id eros auctor condimentum. Maecenas nec lacus erat.
-	</div>
-      </div>
-    </section>
+    <div ui-view></div>
 
     <script src="node_modules/angular/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

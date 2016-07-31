@@ -95,7 +95,11 @@ textarea {
   box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.13);
   margin: 10px;
 }
+.shot-head a {
+  display: block;
+}
 .shot-head .image {
+  display: block;
   text-align: center;
 }
 .shot-head .extra {
@@ -111,10 +115,8 @@ textarea {
   font-size: 18px;
 }
 .shot-head .extra .views {
-  position: absolute;
-  right: 5px;
-  top: 2px;
-  padding: 5px;
+  float: right;
+  padding-right: 5px;
 }
 .shot-head .extra .views .icon {
   margin-right: 5px;
@@ -138,9 +140,19 @@ section.shot {
   width: 768px;
   margin: 0 auto;
 }
+section.shot .shot-head .image {
+  height: 300px;
+}
+section.shot .shot-head .extra {
+  height: auto;
+  min-height: 40px;
+}
 section.shot .shot-description {
   padding: 15px;
   padding-top: 0;
+}
+section.shot .shot-description p {
+  margin: 0;
 }
 section.shot .shot-description .author {
   heigth: 70px;
@@ -157,6 +169,16 @@ section.shot .shot-description .author .name {
 section.shot .shot-description .description {
   color: #666;
   line-height: 1.4;
+}
+section.shot .back {
+  padding: 10px;
+  padding-bottom: 0;
+}
+section.shot .back a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #666;
+  font-size: 20px;
 }
 @media screen and (max-width: 768px) {
   section.shot {
@@ -180,6 +202,8 @@ section.shot .shot-description .description {
 }
 @media screen and (max-width: 425px) {
   section.shot .shot-head .image {
+    height: auto;
+    min-height: auto;
     width: 100%;
   }
   section.shot .shot-head .image img {
