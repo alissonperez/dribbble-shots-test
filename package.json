@@ -25,7 +25,8 @@
     "jshint": "^2.9.2",
     "karma": "^1.1.2",
     "karma-firefox-launcher": "^1.0.0",
-    "karma-jasmine": "^1.0.2"
+    "karma-jasmine": "^1.0.2",
+    "stylus": "^0.54.5"
   },
   "dependencies": {
     "angular": "^1.5.8",
