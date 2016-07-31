@@ -41,9 +41,11 @@ app.provider('Shot', function ShotProvider() {
 });
 
 
-app.controller('ShotsController', ['$scope', 'Shot', function($scope, Shot) {
+app.controller('ShotsController', ['$rootScope', '$scope', 'Shot', function($rootScope, $scope, Shot) {
+  $rootScope.loading = true;
   $scope.shots = [];
   Shot.all().then(function(data){
+    $rootScope.loading = false;
     $scope.shots = data.data;
   });
 }]);
@@ -51,13 +53,15 @@ app.controller('ShotsController', ['$scope', 'Shot', function($scope, Shot) {
 
 app.controller(
   'ShotController',
-  ['$scope', '$stateParams', 'Shot',
-   function($scope, $stateParams, Shot) {
+  ['$rootScope', '$scope', '$stateParams', 'Shot',
+   function($rootScope, $scope, $stateParams, Shot) {
+     $rootScope.loading = true;
      $scope.shot = {};
      $scope.shot_loaded = false;
 
      Shot.get($stateParams.id).then(function(data){
        $scope.shot_loaded = true;
+       $rootScope.loading = false;
        $scope.shot = data.data;
      });
    }]);

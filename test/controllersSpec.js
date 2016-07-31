@@ -2,6 +2,7 @@
 
 describe('Shots Controller', function() {
   var $scope;
+  var $_rootScope;
   var ctrl;
   var newShot;
   var shots = {data: [1, 2, 3]};
@@ -21,17 +22,25 @@ describe('Shots Controller', function() {
 
   beforeEach(inject(function($rootScope, $controller) {
     $scope = $rootScope.$new();
-    ctrl = $controller('ShotsController', {$scope: $scope, Shot: newShot});
+    $_rootScope = $rootScope.$new();
+    ctrl = $controller('ShotsController', {$rootScope: $_rootScope,
+                                           $scope: $scope,
+                                           Shot: newShot});
   }));
 
   it('Set corect shots list', function() {
     expect($scope.shots).toEqual(shots.data);
+  });
+
+  it('sets loading from rootScope as false', function(){
+    expect($_rootScope.loading).toBe(false);
   });
 });
 
 
 describe('Shot Controller', function() {
   var $scope;
+  var $_rootScope;
   var ctrl;
   var newShot;
   var shot = {data: {title: 'Test'}};
@@ -54,8 +63,10 @@ describe('Shot Controller', function() {
 
   beforeEach(inject(function($rootScope, $controller) {
     $scope = $rootScope.$new();
+    $_rootScope = $rootScope.$new();
     ctrl = $controller('ShotController',
-                       {$scope: $scope,
+                       {$rootScope: $_rootScope,
+                        $scope: $scope,
                         $stateParams: $stateParams,
                         Shot: newShot});
   }));
@@ -70,5 +81,9 @@ describe('Shot Controller', function() {
 
   it('sets shot_loaded as true', function(){
     expect($scope.shot_loaded).toBe(true);
+  });
+
+  it('sets loading from rootScope as false', function(){
+    expect($_rootScope.loading).toBe(false);
   });
 });
